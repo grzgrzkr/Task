@@ -15,7 +15,10 @@ public class Wall implements Structure {
     public Optional<Block> findBlockByColor(String color) {
         Block returnedBlock = null;
         for (Block block : blocks) {
-            if (block instanceof CompositeBlock) {
+            if (block instanceof CompositeBlock && block.getColor().equals(color)) {
+                returnedBlock = block;
+                break;
+            } else if (block instanceof CompositeBlock) {
                 for (Block nestedBlock : ((CompositeBlock) block).getBlocks()) {
                     if (nestedBlock.getColor().equals(color)) {
                         returnedBlock = nestedBlock;

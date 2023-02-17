@@ -19,12 +19,4 @@ public class ExampleBlock implements Block {
     public String getMaterial() {
         return material;
     }
-
-    @Override
-    public String toString() {
-        return "ExampleBlock{" +
-                "color='" + color + '\'' +
-                ", material='" + material + '\'' +
-                '}';
-    }
 }
